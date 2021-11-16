@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class NewsRepository{
   Future<List<ArticleModel>>fetchNews()async{
-    var response = await http.get(Uri.parse("https://newsapi.org/v2/top-headlines?country=us&apiKey=0ec04af585ad4a52b57d911ef91620a"));
+    var response = await http.get(Uri.parse("https://newsapi.org/v2/everything?q=tesla&from=2021-10-15&sortBy=publishedAt&apiKey=0ec04af585ad4a52b57d911ef91620af"));
 
     var data = jsonDecode(response.body);
 
